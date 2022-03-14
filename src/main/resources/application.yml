@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://database-1.cbiuua10plj5.ap-northeast-2.rds.amazonaws.com:3306/SON
+
+    username: admin
+    password: 1q2w3e4r!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database: mysql
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+
+logging:
+  level:
+    root: info
+    org:
+      hibernate:
+        type: trace
